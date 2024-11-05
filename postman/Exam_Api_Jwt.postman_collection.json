@@ -1,0 +1,1170 @@
+{
+	"info": {
+		"_postman_id": "aef492f0-b77b-4884-9f6b-51162d91e1a9",
+		"name": "Exam_Api_Jwt",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "35025812"
+	},
+	"item": [
+		{
+			"name": "Create Admin",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"admin\", pm.response.json().userIdentifier);\r",
+							"pm.environment.set(\"idAdmin\", pm.response.json().id);\r",
+							"pm.test(\"Test Create Admin\", function() {\r",
+							"    pm.response.to.have.status(201)\r",
+							"})"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/ld+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"amine.chr2@gmail.com\",\r\n  \"roles\": [\r\n    \"ROLE_ADMIN\"\r\n  ],\r\n  \"password\": \"$2y$13$OzZK7gzGJ3/N9/aAiB6Cv.JJJiHT2YUWJn9cKT1JvSQTFNMgvIfqC\",\r\n  \"firstname\": \"Amine\",\r\n  \"lastname\": \"Chraibi\",\r\n  \"created_at\": \"2024-11-05T08:51:32.420Z\",\r\n  \"updated_at\": \"2024-11-05T08:51:32.420Z\",\r\n  \"avatar\": \"\",\r\n  \"friendWith\": [\r\n  ],\r\n  \"users\": [\r\n  ],\r\n  \"videos\": [\r\n  ],\r\n  \"verified\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/users",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create User 1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"user1\", pm.response.json().userIdentifier);\r",
+							"pm.environment.set(\"idUser1\", pm.response.json().id);\r",
+							"pm.test(\"Test Create User 1\", function() {\r",
+							"    pm.response.to.have.status(201)\r",
+							"})"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/ld+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"amine.chr3@gmail.com\",\r\n  \"roles\": [\r\n  ],\r\n  \"password\": \"$2y$13$OzZK7gzGJ3/N9/aAiB6Cv.JJJiHT2YUWJn9cKT1JvSQTFNMgvIfqC\",\r\n  \"firstname\": \"Amine\",\r\n  \"lastname\": \"Chraibi\",\r\n  \"created_at\": \"2024-11-05T08:51:32.420Z\",\r\n  \"updated_at\": \"2024-11-05T08:51:32.420Z\",\r\n  \"avatar\": \"\",\r\n  \"friendWith\": [\r\n  ],\r\n  \"users\": [\r\n  ],\r\n  \"videos\": [\r\n  ],\r\n  \"verified\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/users",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create User 2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"user2\", pm.response.json().userIdentifier);\r",
+							"pm.environment.set(\"idUser2\", pm.response.json().id);\r",
+							"pm.test(\"Test Create User 2\", function() {\r",
+							"    pm.response.to.have.status(201)\r",
+							"})"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/ld+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"amine.chr4@gmail.com\",\r\n  \"roles\": [\r\n  ],\r\n  \"password\": \"$2y$13$OzZK7gzGJ3/N9/aAiB6Cv.JJJiHT2YUWJn9cKT1JvSQTFNMgvIfqC\",\r\n  \"firstname\": \"Amine\",\r\n  \"lastname\": \"Chraibi\",\r\n  \"created_at\": \"2024-11-05T08:51:32.420Z\",\r\n  \"updated_at\": \"2024-11-05T08:51:32.420Z\",\r\n  \"avatar\": \"\",\r\n  \"friendWith\": [\r\n  ],\r\n  \"users\": [\r\n  ],\r\n  \"videos\": [\r\n  ],\r\n  \"verified\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/users",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create User 3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"user3\", pm.response.json().userIdentifier);\r",
+							"pm.environment.set(\"idUser3\", pm.response.json().id);\r",
+							"pm.test(\"Test Create User 3\", function() {\r",
+							"    pm.response.to.have.status(201)\r",
+							"})"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/ld+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"amine.chr5@gmail.com\",\r\n  \"roles\": [\r\n  ],\r\n  \"password\": \"$2y$13$OzZK7gzGJ3/N9/aAiB6Cv.JJJiHT2YUWJn9cKT1JvSQTFNMgvIfqC\",\r\n  \"firstname\": \"Amine\",\r\n  \"lastname\": \"Chraibi\",\r\n  \"created_at\": \"2024-11-05T08:51:32.420Z\",\r\n  \"updated_at\": \"2024-11-05T08:51:32.420Z\",\r\n  \"avatar\": \"\",\r\n  \"friendWith\": [\r\n  ],\r\n  \"users\": [\r\n  ],\r\n  \"videos\": [\r\n  ],\r\n  \"verified\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/users",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create User 4",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"user4\", pm.response.json().userIdentifier);\r",
+							"pm.environment.set(\"idUser4\", pm.response.json().id);\r",
+							"pm.test(\"Test Create User 4\", function() {\r",
+							"    pm.response.to.have.status(201)\r",
+							"})"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/ld+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"amine.chr6@gmail.com\",\r\n  \"roles\": [\r\n  ],\r\n  \"password\": \"$2y$13$OzZK7gzGJ3/N9/aAiB6Cv.JJJiHT2YUWJn9cKT1JvSQTFNMgvIfqC\",\r\n  \"firstname\": \"Amine\",\r\n  \"lastname\": \"Chraibi\",\r\n  \"created_at\": \"2024-11-05T08:51:32.420Z\",\r\n  \"updated_at\": \"2024-11-05T08:51:32.420Z\",\r\n  \"avatar\": \"\",\r\n  \"friendWith\": [\r\n  ],\r\n  \"users\": [\r\n  ],\r\n  \"videos\": [\r\n  ],\r\n  \"verified\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/users",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Try List Of Users",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Test Show List Of Users\", function() {\r",
+							"    pm.response.to.have.status(200)\r",
+							"})"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/ld+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/users",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Try Delete User 4",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Test Delete User 4\", function() {\r",
+							"    pm.response.to.have.status(204)\r",
+							"})"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/ld+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/users/4",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"users",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login With User 2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"token2\", pm.response.json().token);\r",
+							"pm.test(\"Test Login User 2\", function() {\r",
+							"    pm.response.to.have.status(200)\r",
+							"})"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"{{user2}}\",\r\n  \"password\": \"postman\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/login_check",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"login_check"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login With User 3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"token3\", pm.response.json().token);\r",
+							"pm.test(\"Test Login User 3\", function() {\r",
+							"    pm.response.to.have.status(200)\r",
+							"})"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"{{user3}}\",\r\n  \"password\": \"postman\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/login_check",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"login_check"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login With User 4",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"token4\", pm.response.json().token);\r",
+							"pm.test(\"Test Login User 4\", function() {\r",
+							"    pm.response.to.have.status(200)\r",
+							"})"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"{{user4}}\",\r\n  \"password\": \"postman\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/login_check",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"login_check"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Video 1 By User 2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"idVideo1\", pm.response.json().id);\r",
+							"pm.test(\"Test Create Video 1\", function() {\r",
+							"    pm.response.to.have.status(201)\r",
+							"})"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token3}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/ld+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Video1\",\r\n  \"video_link\": \"https://www.youtube.com/embed/Me6WroM3z6E\",\r\n  \"description\": \"description Video1\",\r\n  \"created_at\": \"2024-11-05T09:20:08.373Z\",\r\n  \"updated_at\": \"2024-11-05T09:20:08.373Z\",\r\n  \"user\": \"{{url}}/users/{{idUser2}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/videos",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"videos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Video 2 By User 3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"idVideo2\", pm.response.json().id);\r",
+							"pm.test(\"Test Create Video 2\", function() {\r",
+							"    pm.response.to.have.status(201)\r",
+							"})"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token3}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/ld+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Video2\",\r\n  \"video_link\": \"https://www.youtube.com/embed/Me6WroM3z6E\",\r\n  \"description\": \"description Video2\",\r\n  \"created_at\": \"2024-11-05T09:20:08.373Z\",\r\n  \"updated_at\": \"2024-11-05T09:20:08.373Z\",\r\n  \"user\": \"{{url}}/users/{{idUser3}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/videos",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"videos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Video 3 By User 4",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"idVideo3\", pm.response.json().id);\r",
+							"pm.test(\"Test Create Video 3\", function() {\r",
+							"    pm.response.to.have.status(201)\r",
+							"})"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token3}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/ld+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Video3\",\r\n  \"video_link\": \"https://www.youtube.com/embed/Me6WroM3z6E\",\r\n  \"description\": \"description Video3\",\r\n  \"created_at\": \"2024-11-05T09:20:08.373Z\",\r\n  \"updated_at\": \"2024-11-05T09:20:08.373Z\",\r\n  \"user\": \"{{url}}/users/{{idUser4}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/videos",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"videos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Of Videos",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Test List Of Videos\", function() {\r",
+							"    pm.response.to.have.status(200)\r",
+							"})"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/ld+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/videos",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"videos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Watch Video 2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Test Watch Video 2\", function() {\r",
+							"    pm.response.to.have.status(200)\r",
+							"})"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/ld+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/videos/{{idVideo2}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"videos",
+						"{{idVideo2}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Video 1 By User 2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"\r",
+							"pm.test(\"Test Update Title Video 1\", function() {\r",
+							"    pm.response.to.have.status(200)\r",
+							"})"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token2}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/merge-patch+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Video01\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/videos/{{idVideo1}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"videos",
+						"{{idVideo1}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Video 3 By User 2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"idVideo3\", null);\r",
+							"pm.test(\"Test Delete Video 3\", function() {\r",
+							"    pm.response.to.have.status(204)\r",
+							"})"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token2}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/ld+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/videos/{{idVideo3}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"videos",
+						"{{idVideo3}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login With Admin",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"tokenAdmin\", pm.response.json().token);\r",
+							"pm.test(\"Test Login Admin\", function() {\r",
+							"    pm.response.to.have.status(200)\r",
+							"})"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"{{admin}}\",\r\n  \"password\": \"postman\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/login_check",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"login_check"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Watch User 4 By Admin",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Test Watch User 4\", function() {\r",
+							"    pm.response.to.have.status(200)\r",
+							"})"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{tokenAdmin}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/ld+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/users/{{idUser4}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"users",
+						"{{idUser4}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update User 1 By Admin",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"\r",
+							"pm.test(\"Test Update Lastname User 1 & Add Friends\", function() {\r",
+							"    pm.response.to.have.status(200)\r",
+							"})"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{tokenAdmin}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/merge-patch+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"lastname\": \"Chrai\",\r\n  \"friendWith\": [\r\n    \"{{url}}/users/{{idUser2}}\",\r\n    \"{{url}}/users/{{idUser3}}\",\r\n    \"{{url}}/users/{{idUser4}}\"\r\n  ]\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/users/{{idUser1}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"users",
+						"{{idUser1}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete User 2 By Admin",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"idUser2\", null);\r",
+							"pm.test(\"Test Delete User 2\", function() {\r",
+							"    pm.response.to.have.status(204)\r",
+							"})"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{tokenAdmin}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/ld+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/users/{{idUser2}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"users",
+						"{{idUser2}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Of Videos",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Test List Of Videos\", function() {\r",
+							"    pm.response.to.have.status(200)\r",
+							"})"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/ld+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/videos",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"videos"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "inherit"
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
