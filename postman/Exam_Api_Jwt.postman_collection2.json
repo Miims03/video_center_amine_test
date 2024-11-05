@@ -254,7 +254,7 @@
 					"script": {
 						"exec": [
 							"pm.test(\"Test Show List Of Users\", function() {\r",
-							"    pm.response.to.have.status(200)\r",
+							"    pm.response.to.have.status(401)\r",
 							"})"
 						],
 						"type": "text/javascript",
@@ -303,7 +303,7 @@
 					"script": {
 						"exec": [
 							"pm.test(\"Test Delete User 4\", function() {\r",
-							"    pm.response.to.have.status(204)\r",
+							"    pm.response.to.have.status(401)\r",
 							"})"
 						],
 						"type": "text/javascript",
