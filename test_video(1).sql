@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : mar. 05 nov. 2024 à 12:15
+-- Généré le : mar. 05 nov. 2024 à 12:44
 -- Version du serveur : 10.4.28-MariaDB
 -- Version de PHP : 8.2.12
 
@@ -59,17 +59,6 @@ CREATE TABLE `user` (
   `avatar` longtext DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
---
--- Déchargement des données de la table `user`
---
-
-INSERT INTO `user` (`id`, `email`, `roles`, `password`, `firstname`, `lastname`, `created_at`, `updated_at`, `is_verified`, `avatar`) VALUES
-(1, 'amine.chr2@gmail.com', '[\"ROLE_ADMIN\"]', '$2y$13$OzZK7gzGJ3/N9/aAiB6Cv.JJJiHT2YUWJn9cKT1JvSQTFNMgvIfqC', 'Amine', 'Chraibi', '2024-11-05 08:51:32', '2024-11-05 08:51:32', 1, ''),
-(2, 'amine.chr3@gmail.com', '[]', '$2y$13$OzZK7gzGJ3/N9/aAiB6Cv.JJJiHT2YUWJn9cKT1JvSQTFNMgvIfqC', 'Amine', 'Chrai', '2024-11-05 08:51:32', '2024-11-05 08:51:32', 1, ''),
-(4, 'amine.chr5@gmail.com', '[]', '$2y$13$OzZK7gzGJ3/N9/aAiB6Cv.JJJiHT2YUWJn9cKT1JvSQTFNMgvIfqC', 'Amine', 'Chraibi', '2024-11-05 08:51:32', '2024-11-05 08:51:32', 1, ''),
-(5, 'amine.chr6@gmail.com', '[]', '$2y$13$OzZK7gzGJ3/N9/aAiB6Cv.JJJiHT2YUWJn9cKT1JvSQTFNMgvIfqC', 'Amine', 'Chraibi', '2024-11-05 08:51:32', '2024-11-05 08:51:32', 1, ''),
-(9, 'amine.chr4@gmail.com', '[]', '$2y$13$OzZK7gzGJ3/N9/aAiB6Cv.JJJiHT2YUWJn9cKT1JvSQTFNMgvIfqC', 'Amine', 'Chraibi', '2024-11-05 08:51:32', '2024-11-05 08:51:32', 1, '');
-
 -- --------------------------------------------------------
 
 --
@@ -80,14 +69,6 @@ CREATE TABLE `user_user` (
   `user_source` int(11) NOT NULL,
   `user_target` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Déchargement des données de la table `user_user`
---
-
-INSERT INTO `user_user` (`user_source`, `user_target`) VALUES
-(2, 4),
-(2, 5);
 
 -- --------------------------------------------------------
 
@@ -104,13 +85,6 @@ CREATE TABLE `video` (
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Déchargement des données de la table `video`
---
-
-INSERT INTO `video` (`id`, `user_id`, `title`, `video_link`, `description`, `created_at`, `updated_at`) VALUES
-(2, 4, 'Video2', 'https://www.youtube.com/embed/Me6WroM3z6E', 'description Video2', '2024-11-05 09:20:08', '2024-11-05 09:20:08');
 
 --
 -- Index pour les tables déchargées
@@ -152,13 +126,13 @@ ALTER TABLE `video`
 -- AUTO_INCREMENT pour la table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT pour la table `video`
 --
 ALTER TABLE `video`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- Contraintes pour les tables déchargées
